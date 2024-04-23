@@ -1,5 +1,10 @@
 <?php
-require 'php-gd.php'; // تحديث المسار لمكان مكتبة php-gd-farsi
+/* Eid moubark
+ * By Yousef Alharbi
+ * YKSAlharbi2030@gmail.com
+*/
+
+require 'php-gd.php'; // تحديث المسار لمكان مكتبة 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $employee_name = htmlspecialchars($_POST["employee_name"], ENT_QUOTES, 'UTF-8');
