@@ -14,10 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $image_path = "img/your-image.jpg";
     $image = imagecreatefromjpeg($image_path);
 
-    // اللون الأخضر للنص
+    // اللون النص
     $color = imagecolorallocate($image, 149, 123, 89); // RGB للأخضر (0, 255, 0)
 
-    // تحديد مكان النص
+    // تحديد نوع الخط
     $font_path = "arial.ttf";
     $font_size = 50; // حجم الخط
 
@@ -26,12 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $text_box = imagettfbbox($font_size, 0, $font_path, $processed_text);
     $text_width = $text_box[2] - $text_box[0];
     $x = (imagesx($image) - $text_width) / 2;
-    $y = imagesy($image) - 200; // تقليل قيمة 'y' لرفع النص قليلاً
+    $y = imagesy($image) - 200; // ارتفاع النص من الاسفل
 
     // إضافة النص إلى الصورة
     imagettftext($image, $font_size, 0, $x, $y, $color, $font_path, $processed_text);
 
-    // تحديد اسم الملف الفريد للصورة المحفوظة
+    // تحديد اسم الملف للصورة المحفوظة
     $timestamp = time();
     $saved_file_path = "up/employee_image_$timestamp.jpg";
 
