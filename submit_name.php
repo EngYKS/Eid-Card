@@ -1,5 +1,5 @@
 <?php
-/* Eid moubark
+/* Eid mubarak
  * By Yousef Alharbi
  * YKSAlharbi2030@gmail.com
 */
